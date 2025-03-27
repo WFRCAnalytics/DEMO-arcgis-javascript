@@ -85,7 +85,15 @@ require([
     });
 
     map.add(layerLrtStops);
+   
+    
+    // Add Test SE Layer
 
+    layerSELayer = new FeatureLayer({
+        url: "https://services1.arcgis.com/taguadKoI1XFwivx/arcgis/rest/services/STATEWIDE_TAZ_gdb/FeatureServer/1"
+    });
+
+    map.add(layerSELayer);
 
     // ADD CSV LAYER
 
@@ -134,7 +142,8 @@ require([
         layerInfos: [
                       { layer: csvRandomSpots , title: 'Random Spots - CSV Layer' },
                       { layer: layerLrtStops  , title: 'LRT Stops - AGOL Layer'   },
-                      { layer: geojsonSegments, title: 'Segments - GeoJSON Layer' }
+                      { layer: geojsonSegments, title: 'Segments - GeoJSON Layer' },
+                      { layer: layerSELayer   , title: 'SE Layer'                 }
                     ]
     });
     view.ui.add(legend, "top-right");
