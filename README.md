@@ -1,1 +1,1 @@
-# arcgis-javascript-demo
+# DEMO-arcgis-javascript
